@@ -11,7 +11,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="4" Name="container" Cursor="Hand" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                        <Border Opacity="0.9" CornerRadius="4" Name="container" Cursor="Hand" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
                             <ContentPresenter/>
                             
                             <VisualStateManager.VisualStateGroups>
@@ -25,6 +25,11 @@
                                     <VisualState Name="Normal">
                                         <Storyboard>
                                             
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState Name="Click">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="container" Storyboard.TargetProperty="Opacity" To="1.0" Duration="0:0:0.05"/>
                                         </Storyboard>
                                     </VisualState>
                                 </VisualStateGroup>
