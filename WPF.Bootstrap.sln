@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.Bootstrap", "WPF.Bootstrap\WPF.Bootstrap.csproj", "{734839C0-6FA8-4514-BD97-EABD72B35246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.Bootstrap.Demo", "WPF.Bootstrap.Demo\WPF.Bootstrap.Demo.csproj", "{79E74C86-D72E-434E-A116-623322A59810}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{734839C0-6FA8-4514-BD97-EABD72B35246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734839C0-6FA8-4514-BD97-EABD72B35246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734839C0-6FA8-4514-BD97-EABD72B35246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734839C0-6FA8-4514-BD97-EABD72B35246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79E74C86-D72E-434E-A116-623322A59810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79E74C86-D72E-434E-A116-623322A59810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79E74C86-D72E-434E-A116-623322A59810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79E74C86-D72E-434E-A116-623322A59810}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
