@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:b="http://www.scheshan.com/bootstrap"
         x:Class="WPF.Bootstrap.Demo.MainWindow"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="700" Width="800">
     <Window.Resources>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default.xaml"/>
     </Window.Resources>
@@ -62,5 +62,11 @@
         <TextBox Margin="10" IsEnabled="False" Text="textbox disabled"></TextBox>
 
         <TextBox Margin="10" IsReadOnly="True" Text="textbox readonly"></TextBox>
+
+        <TabControl Margin="10" TabStripPlacement="Right">
+
+            <TabItem Header="Button" IsSelected="True"></TabItem>
+            <TabItem Header="Text"></TabItem>
+        </TabControl>
     </StackPanel>
 </Window>

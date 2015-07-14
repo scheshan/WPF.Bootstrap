@@ -1,0 +1,146 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TabItem" x:Key="TopTabItemStyle">
+        <Setter Property="Cursor" Value="Hand"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid>
+                        <Border Name="bd" Background="White" Margin="0,0,0,-2" Opacity="0" CornerRadius="4,4,0,0"></Border>
+
+                        <Border Name="container" Background="#fff" Padding="15 10" BorderThickness="1,1,1,0" CornerRadius="4,4,0,0">
+                            <ContentPresenter Name="content" TextBlock.Foreground="{DynamicResource TextPrimary}" Content="{TemplateBinding Header}"></ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="container" Property="BorderBrush" Value="#ddd"></Setter>
+                            <Setter TargetName="bd" Property="Opacity" Value="1"></Setter>
+                            <Setter TargetName="content" Property="TextBlock.Foreground" Value="#555"></Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"></Condition>
+                                <Condition Property="IsSelected" Value="False"></Condition>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="container" Property="Background" Value="#eee"></Setter>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="TabItem" x:Key="BottomTabItemStyle">
+        <Setter Property="Cursor" Value="Hand"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid>
+                        <Border Name="bd" Background="White" Margin="0,-2,0,0" Opacity="0" CornerRadius="0,0,4,4"></Border>
+
+                        <Border Name="container" Padding="15 10" BorderThickness="1,0,1,1" CornerRadius="0,0,4,4">
+                            <ContentPresenter Name="content" TextBlock.Foreground="{DynamicResource TextPrimary}" Content="{TemplateBinding Header}"></ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="container" Property="BorderBrush" Value="#ddd"></Setter>
+                            <Setter TargetName="bd" Property="Opacity" Value="1"></Setter>
+                            <Setter TargetName="content" Property="TextBlock.Foreground" Value="#555"></Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"></Condition>
+                                <Condition Property="IsSelected" Value="False"></Condition>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="container" Property="Background" Value="#eee"></Setter>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="TabItem" x:Key="LeftTabItemStyle">
+        <Setter Property="Cursor" Value="Hand"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid>
+                        <Border Name="bd" Background="White" Margin="0,0,-2,0" Opacity="0" CornerRadius="4,0,0,4"></Border>
+
+                        <Border Name="container" Background="#fff" Padding="15 10" BorderThickness="1,1,0,1" CornerRadius="4,0,0,4">
+                            <ContentPresenter Name="content" TextBlock.Foreground="{DynamicResource TextPrimary}" Content="{TemplateBinding Header}"></ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="container" Property="BorderBrush" Value="#ddd"></Setter>
+                            <Setter TargetName="bd" Property="Opacity" Value="1"></Setter>
+                            <Setter TargetName="content" Property="TextBlock.Foreground" Value="#555"></Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"></Condition>
+                                <Condition Property="IsSelected" Value="False"></Condition>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="container" Property="Background" Value="#eee"></Setter>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="TabItem" x:Key="RightTabItemStyle">
+        <Setter Property="Cursor" Value="Hand"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid>
+                        <Border Name="bd" Background="White" Margin="-2,0,0,0" Opacity="0" CornerRadius="0,4,4,0"></Border>
+
+                        <Border Name="container" Padding="15 10" BorderThickness="0,1,1,1" CornerRadius="0,4,4,0">
+                            <ContentPresenter Name="content" TextBlock.Foreground="{DynamicResource TextPrimary}" Content="{TemplateBinding Header}"></ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="container" Property="BorderBrush" Value="#ddd"></Setter>
+                            <Setter TargetName="bd" Property="Opacity" Value="1"></Setter>
+                            <Setter TargetName="content" Property="TextBlock.Foreground" Value="#555"></Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"></Condition>
+                                <Condition Property="IsSelected" Value="False"></Condition>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="container" Property="Background" Value="#eee"></Setter>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="TabControl">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#ccc"/>
+        <Setter Property="Padding" Value="4"></Setter>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource TopTabItemStyle}"></Setter>
+        <Setter Property="Background" Value="#fff"/>
+        <Style.Triggers>
+            <Trigger Property="TabStripPlacement" Value="Left">
+                <Setter Property="ItemContainerStyle" Value="{StaticResource LeftTabItemStyle}"/>
+            </Trigger>
+            <Trigger Property="TabStripPlacement" Value="Bottom">
+                <Setter Property="ItemContainerStyle" Value="{StaticResource BottomTabItemStyle}"/>
+            </Trigger>
+            <Trigger Property="TabStripPlacement" Value="Right">
+                <Setter Property="ItemContainerStyle" Value="{StaticResource RightTabItemStyle}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

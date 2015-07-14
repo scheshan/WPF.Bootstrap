@@ -4,5 +4,6 @@
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Brush.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Button.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/TextBox.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/TabControl.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
