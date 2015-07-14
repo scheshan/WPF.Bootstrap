@@ -13,5 +13,8 @@
         <TabItem Header="Text">
             <view:Text/>
         </TabItem>
+        <TabItem Header="ProgressBar">
+            <view:ProgressBar/>
+        </TabItem>
     </TabControl>
 </Window>

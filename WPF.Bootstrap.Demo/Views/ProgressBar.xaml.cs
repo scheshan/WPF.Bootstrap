@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF.Bootstrap.Demo
+namespace WPF.Bootstrap.Demo.Views
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// Interaction logic for ProgressBar.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProgressBar : UserControl
     {
-        public MainWindow()
+        public ProgressBar()
         {
             InitializeComponent();
-            ProgressBar pb = new ProgressBar();
         }
     }
 }
