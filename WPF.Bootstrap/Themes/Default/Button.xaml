@@ -294,6 +294,9 @@
                                                          Duration="0:0:0.02" To="0.7"></DoubleAnimation>
                                     </Storyboard>
                                 </VisualState>
+                                <VisualState Name="Readonly">
+
+                                </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                     </Border>

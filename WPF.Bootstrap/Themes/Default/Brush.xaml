@@ -1,8 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <SolidColorBrush x:Key="PrimaryBrush" Color="#337ab7"></SolidColorBrush>
-    <SolidColorBrush x:Key="InfoBrush" Color="#d9edf7"></SolidColorBrush>
-    <SolidColorBrush x:Key="SuccessBrush" Color="#dff0d8"></SolidColorBrush>
-    <SolidColorBrush x:Key="WarningBrush" Color="#fcf8e3"></SolidColorBrush>
-    <SolidColorBrush x:Key="DangerBrush" Color="#f2dede"></SolidColorBrush>
+    <SolidColorBrush x:Key="BgPrimary" Color="#337ab7"></SolidColorBrush>
+    <SolidColorBrush x:Key="BgInfo" Color="#d9edf7"></SolidColorBrush>
+    <SolidColorBrush x:Key="BgSuccess" Color="#dff0d8"></SolidColorBrush>
+    <SolidColorBrush x:Key="BgWarning" Color="#fcf8e3"></SolidColorBrush>
+    <SolidColorBrush x:Key="BgDanger" Color="#f2dede"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextMuted" Color="#777"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextPrimary" Color="#337ab7"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextSuccess" Color="#3c763d"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextInfo" Color="#31708f"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextWarning" Color="#8a6d3b"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextDanger" Color="#a94442"></SolidColorBrush>
 </ResourceDictionary>

@@ -5,9 +5,37 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
-                    <Border Padding="{TemplateBinding Padding}" Height="{TemplateBinding Height}" BorderThickness="1" BorderBrush="#ccc" CornerRadius="4">
-                        <ScrollViewer Padding="0" x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                    </Border>
+                    <Grid>
+                        <Border Name="bd" BorderThickness="1" CornerRadius="4" BorderBrush="#66afe9" Opacity="0">
+                            <Border.Effect>
+                                <BlurEffect></BlurEffect>
+                                
+                            </Border.Effect>
+                        </Border>
+                        <Border Name="container" Padding="{TemplateBinding Padding}" Height="{TemplateBinding Height}" BorderThickness="1" BorderBrush="#ccc" Background="#fff" CornerRadius="4" Margin="1">
+                            <ScrollViewer Padding="0" x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup>
+                                <VisualState Name="Normal"></VisualState>
+                                <VisualState Name="Focused">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="container" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        Duration="0:0:0.05" To="#66afe9"></ColorAnimation>
+                                        <DoubleAnimation Storyboard.TargetName="bd" Storyboard.TargetProperty="Opacity"
+                                                            Duration="0:0:0.05" To="1"></DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="container" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        Duration="0:0:0.05" To="#eee"></ColorAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
