@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Buttons.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Brush.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Button.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/TextBox.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
