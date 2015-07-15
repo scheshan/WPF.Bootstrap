@@ -8,5 +8,6 @@
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/ProgressBar.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Alert.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Panel.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Dialog.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
