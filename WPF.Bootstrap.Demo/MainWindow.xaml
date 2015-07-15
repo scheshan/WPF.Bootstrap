@@ -16,5 +16,8 @@
         <TabItem Header="ProgressBar">
             <view:ProgressBar/>
         </TabItem>
+        <TabItem Header="Panel">
+            <view:Panel/>
+        </TabItem>
     </TabControl>
 </Window>

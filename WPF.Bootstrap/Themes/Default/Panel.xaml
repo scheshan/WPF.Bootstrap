@@ -1,0 +1,111 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="GroupBox" x:Key="PanelBaseStyle">
+        <Setter Property="Foreground" Value="#333"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="GroupBox">
+                    <Border CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Border Name="header" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,0,0,1">
+                                <ContentPresenter Margin="15 10" ContentSource="Header" SnapsToDevicePixels="True"></ContentPresenter>
+                            </Border>
+                            
+                            <ContentControl Name="content" Grid.Row="1" TextBlock.Foreground="#333">
+                                <ContentPresenter Margin="15" SnapsToDevicePixels="True"></ContentPresenter>
+                            </ContentControl>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Header" Value="{x:Null}">
+                            <Setter Property="Visibility" TargetName="header" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="GroupBox" x:Key="DefaultPanel" BasedOn="{StaticResource PanelBaseStyle}">
+        <Setter Property="Background" Value="#f5f5f5"/>
+        <Setter Property="BorderBrush" Value="#ddd"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" Foreground="#333"></ContentControl>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="GroupBox" x:Key="PrimaryPanel" BasedOn="{StaticResource PanelBaseStyle}">
+        <Setter Property="Background" Value="#337ab7"/>
+        <Setter Property="BorderBrush" Value="#337ab7"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" Foreground="#fff"></ContentControl>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="GroupBox" x:Key="SuccessPanel" BasedOn="{StaticResource PanelBaseStyle}">
+        <Setter Property="Background" Value="#dff0d8"/>
+        <Setter Property="BorderBrush" Value="#d6e9c6"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" Foreground="#3c763d"></ContentControl>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="GroupBox" x:Key="InfoPanel" BasedOn="{StaticResource PanelBaseStyle}">
+        <Setter Property="Background" Value="#d9edf7"/>
+        <Setter Property="BorderBrush" Value="#bce8f1"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" Foreground="#31708f"></ContentControl>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="GroupBox" x:Key="WarningPanel" BasedOn="{StaticResource PanelBaseStyle}">
+        <Setter Property="Background" Value="#fcf8e3"/>
+        <Setter Property="BorderBrush" Value="#faebcc"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" Foreground="#8a6d3b"></ContentControl>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="GroupBox" x:Key="DangerPanel" BasedOn="{StaticResource PanelBaseStyle}">
+        <Setter Property="Background" Value="#f2dede"/>
+        <Setter Property="BorderBrush" Value="#ebccd1"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" Foreground="#a94442"></ContentControl>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
