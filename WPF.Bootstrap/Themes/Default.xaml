@@ -6,5 +6,6 @@
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/TextBox.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/TabControl.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/ProgressBar.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Label.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

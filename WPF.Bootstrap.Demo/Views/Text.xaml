@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="800" d:DesignWidth="800">
     <StackPanel>
 
         <Border Background="{StaticResource BgPrimary}" Margin="10" Padding="10" TextBlock.Foreground="White">
@@ -32,6 +32,51 @@
         <TextBox Margin="10" IsEnabled="False" Text="textbox disabled"></TextBox>
 
         <TextBox Margin="10" IsReadOnly="True" Text="textbox readonly"></TextBox>
+        
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
+            <TextBlock Foreground="{StaticResource TextMuted}" HorizontalAlignment="Center">muted</TextBlock>
+            <TextBlock Foreground="{StaticResource TextInfo}" HorizontalAlignment="Center" Grid.Column="1">info</TextBlock>
+            <TextBlock Foreground="{StaticResource TextPrimary}" HorizontalAlignment="Center" Grid.Column="2">primary</TextBlock>
+            <TextBlock Foreground="{StaticResource TextSuccess}" HorizontalAlignment="Center" Grid.Column="3">success</TextBlock>
+            <TextBlock Foreground="{StaticResource TextWarning}" HorizontalAlignment="Center" Grid.Column="4">warning</TextBlock>
+            <TextBlock Foreground="{StaticResource TextDanger}" HorizontalAlignment="Center" Grid.Column="5">danger</TextBlock>
+        </Grid>
+
+        <Label Style="{StaticResource SuccessAlert}" Margin="10">
+            <TextBlock>
+                <Run Text="Well done!" FontWeight="Bold"/>
+                <Run Text="You successfully read this important alert message."/>
+            </TextBlock>
+        </Label>
+
+        <Label Style="{StaticResource InfoAlert}" Margin="10">
+            <TextBlock>
+                <Run Text="Heads up!" FontWeight="Bold"/>
+                <Run Text="This alert needs your attention, but it's not super important."/>
+            </TextBlock>
+        </Label>
+        
+        <Label Style="{StaticResource WarningAlert}" Margin="10">
+            <TextBlock>
+                <Run Text="Warning!" FontWeight="Bold"/>
+                <Run Text="Better check yourself, you're not looking too good."/>
+            </TextBlock>
+        </Label>
+        
+        <Label Style="{StaticResource DangerAlert}" Margin="10">
+            <TextBlock>
+                <Run Text="Oh snap!" FontWeight="Bold"/>
+                <Run Text="Change a few things up and try submitting again."/>
+            </TextBlock>
+        </Label>
     </StackPanel>
 </UserControl>
