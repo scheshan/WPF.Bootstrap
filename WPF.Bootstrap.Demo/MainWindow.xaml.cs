@@ -23,7 +23,6 @@ namespace WPF.Bootstrap.Demo
         public MainWindow()
         {
             InitializeComponent();
-            ProgressBar pb = new ProgressBar();
         }
     }
 }

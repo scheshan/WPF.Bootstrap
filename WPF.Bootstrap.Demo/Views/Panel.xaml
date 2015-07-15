@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:bootstrap="http://github.com/scheshan/bootstrap"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid>
@@ -18,33 +19,55 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <GroupBox Margin="10" Header="Default Panel" Style="{StaticResource DefaultPanel}">
-            <TextBlock>Default content</TextBlock>
-        </GroupBox>
-
-        <GroupBox Margin="10" Grid.Column="1" Header="Primary Panel" Style="{StaticResource PrimaryPanel}">
-            <TextBlock>Primary content</TextBlock>
-        </GroupBox>
-
-        <GroupBox Margin="10" Grid.Row="1" Header="Info Panel" Style="{StaticResource InfoPanel}">
-            <TextBlock>Info content</TextBlock>
-        </GroupBox>
-
-        <GroupBox Margin="10" Grid.Row="1" Grid.Column="1" Header="Success Panel" Style="{StaticResource SuccessPanel}">
-            <TextBlock>Success content</TextBlock>
-        </GroupBox>
-
-        <GroupBox Margin="10" Grid.Row="2" Header="Warning Panel" Style="{StaticResource WarningPanel}">
-            <TextBlock>Warning content</TextBlock>
-        </GroupBox>
-
-        <GroupBox Margin="10" Grid.Row="2" Grid.Column="2" Header="Danger Panel" Style="{StaticResource DangerPanel}">
-            <TextBlock>Danger content</TextBlock>
-        </GroupBox>
         
-        <GroupBox Margin="10" Grid.Row="3" Style="{StaticResource DefaultPanel}">
-            <TextBlock>No header Panel</TextBlock>
-        </GroupBox>
+        <bootstrap:BootstrapPanel Margin="10" Type="Default" Header="Default Panel">
+            <TextBlock>content</TextBlock>
+            <bootstrap:BootstrapPanel.Footer>
+                <TextBlock>footer</TextBlock>
+            </bootstrap:BootstrapPanel.Footer>
+        </bootstrap:BootstrapPanel>
+        
+        <bootstrap:BootstrapPanel Margin="10" Grid.Column="1" Type="Primary" Header="Primary Panel">
+            <TextBlock>content</TextBlock>
+            <bootstrap:BootstrapPanel.Footer>
+                <TextBlock>footer</TextBlock>
+            </bootstrap:BootstrapPanel.Footer>
+        </bootstrap:BootstrapPanel>
+
+        <bootstrap:BootstrapPanel Type="Info" Margin="10" Grid.Row="1" Header="Info Panel">
+            <TextBlock>content</TextBlock>
+            <bootstrap:BootstrapPanel.Footer>
+                <TextBlock>footer</TextBlock>
+            </bootstrap:BootstrapPanel.Footer>
+        </bootstrap:BootstrapPanel>
+
+        <bootstrap:BootstrapPanel Type="Success" Margin="10" Grid.Row="1" Grid.Column="1" Header="Success Panel">
+            <TextBlock>content</TextBlock>
+            <bootstrap:BootstrapPanel.Footer>
+                <TextBlock>footer</TextBlock>
+            </bootstrap:BootstrapPanel.Footer>
+        </bootstrap:BootstrapPanel>
+
+        <bootstrap:BootstrapPanel Type="Warning" Margin="10" Grid.Row="2" Header="Warning Panel">
+            <TextBlock>content</TextBlock>
+            <bootstrap:BootstrapPanel.Footer>
+                <TextBlock>footer</TextBlock>
+            </bootstrap:BootstrapPanel.Footer>
+        </bootstrap:BootstrapPanel>
+
+        <bootstrap:BootstrapPanel Type="Danger" Margin="10" Grid.Row="2" Grid.Column="1" Header="Danger Panel">
+            <TextBlock>content</TextBlock>
+            <bootstrap:BootstrapPanel.Footer>
+                <TextBlock>footer</TextBlock>
+            </bootstrap:BootstrapPanel.Footer>
+        </bootstrap:BootstrapPanel>
+        
+        <bootstrap:BootstrapPanel Margin="10" Grid.Row="3" Header="Default Panel">
+            <TextBlock>panel with no footer</TextBlock>
+        </bootstrap:BootstrapPanel>
+        
+        <bootstrap:BootstrapPanel Type="Danger" Margin="10" Grid.Row="3" Grid.Column="1">
+            <TextBlock>panel with no title and footer</TextBlock>
+        </bootstrap:BootstrapPanel>
     </Grid>
 </UserControl>

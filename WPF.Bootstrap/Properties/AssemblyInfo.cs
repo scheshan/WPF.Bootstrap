@@ -55,4 +55,4 @@ using System.Windows.Markup;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: XmlnsDefinition("http://www.scheshan.com/bootstrap", "WPF.Bootstrap")]
+[assembly: XmlnsDefinition("http://github.com/scheshan/bootstrap", "WPF.Bootstrap.Controls")]

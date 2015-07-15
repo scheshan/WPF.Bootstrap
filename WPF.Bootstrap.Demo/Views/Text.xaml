@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:bootstrap="http://github.com/scheshan/bootstrap"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800">
     <StackPanel>
@@ -51,32 +52,32 @@
             <TextBlock Foreground="{StaticResource TextDanger}" HorizontalAlignment="Center" Grid.Column="5">danger</TextBlock>
         </Grid>
 
-        <Label Style="{StaticResource SuccessAlert}" Margin="10">
+        <bootstrap:Alert Type="Success" Margin="10">
             <TextBlock>
                 <Run Text="Well done!" FontWeight="Bold"/>
                 <Run Text="You successfully read this important alert message."/>
             </TextBlock>
-        </Label>
+        </bootstrap:Alert>
 
-        <Label Style="{StaticResource InfoAlert}" Margin="10">
+        <bootstrap:Alert Type="Info" Margin="10">
             <TextBlock>
                 <Run Text="Heads up!" FontWeight="Bold"/>
                 <Run Text="This alert needs your attention, but it's not super important."/>
             </TextBlock>
-        </Label>
-        
-        <Label Style="{StaticResource WarningAlert}" Margin="10">
+        </bootstrap:Alert>
+
+        <bootstrap:Alert Type="Warning" Margin="10">
             <TextBlock>
                 <Run Text="Warning!" FontWeight="Bold"/>
                 <Run Text="Better check yourself, you're not looking too good."/>
             </TextBlock>
-        </Label>
-        
-        <Label Style="{StaticResource DangerAlert}" Margin="10">
+        </bootstrap:Alert>
+
+        <bootstrap:Alert Type="Danger" Margin="10">
             <TextBlock>
                 <Run Text="Oh snap!" FontWeight="Bold"/>
                 <Run Text="Change a few things up and try submitting again."/>
             </TextBlock>
-        </Label>
+        </bootstrap:Alert>
     </StackPanel>
 </UserControl>
