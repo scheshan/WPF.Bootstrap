@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="WPF.Bootstrap.Demo.Views.List"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="BorderBrush" Value="#dddddd"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border ClipToBounds="True" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,0,0,1">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="BorderBrush" Value="#dddddd"></Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border CornerRadius="4" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
+                            
+                                <ItemsPresenter ClipToBounds="True"></ItemsPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="listBox1" Height="300" Margin="10">
+            <ListBox.Items>
+                <sys:String>Cras justo odio</sys:String>
+                <sys:String>Dapibus ac facilisis in</sys:String>
+                <sys:String>Morbi leo risus</sys:String>
+                <sys:String>Porta ac consectetur ac</sys:String>
+                <sys:String>Vestibulum at eros</sys:String>
+                <sys:String>Cras justo odio</sys:String>
+                <sys:String>Dapibus ac facilisis in</sys:String>
+                <sys:String>Morbi leo risus</sys:String>
+                <sys:String>Porta ac consectetur ac</sys:String>
+                <sys:String>Vestibulum at eros</sys:String>
+            </ListBox.Items>            
+        </ListBox>
+    </Grid>
+</UserControl>

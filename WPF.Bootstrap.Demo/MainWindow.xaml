@@ -20,5 +20,9 @@
         <TabItem Header="Panel">
             <view:Panel/>
         </TabItem>
+
+        <TabItem Header="List">
+            <view:List/>
+        </TabItem>
     </TabControl>
 </wpf:Dialog>
