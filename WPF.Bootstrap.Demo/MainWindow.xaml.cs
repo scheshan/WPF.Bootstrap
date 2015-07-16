@@ -23,7 +23,7 @@ namespace WPF.Bootstrap.Demo
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
     }
 }
