@@ -24,13 +24,6 @@ namespace WPF.Bootstrap.Demo
         public MainWindow()
         {
             InitializeComponent();
-
-            this.Loaded += MainWindow_Loaded;
-        }
-
-        void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            new TestDialog().Show();
         }
     }
 }
