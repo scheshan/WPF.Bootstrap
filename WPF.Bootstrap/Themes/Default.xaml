@@ -10,5 +10,6 @@
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Panel.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Dialog.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/CheckBox.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/RadioButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

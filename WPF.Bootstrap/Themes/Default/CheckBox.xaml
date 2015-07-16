@@ -12,12 +12,13 @@
                 <ControlTemplate TargetType="CheckBox">
                     <Grid Name="container">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="18"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <Grid>
-                            <Border BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="1" Width="14" Height="14"></Border>
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="1" 
+                                    Width="14" Height="14"></Border>
                             <Rectangle x:Name="IndeterminateCheck"
                                        Fill="#666"
                                        Height="3"
@@ -26,12 +27,12 @@
                             <Viewbox Name="check" Opacity="0" Margin="4">
                                 <Path Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z" Stretch="Fill" Width="10" Height="8" Fill="#666"></Path>
                             </Viewbox>
-                            <Rectangle x:Name="disabled"
-                                       Opacity="0"
-                                       StrokeThickness="1"
-                                       Fill="#8CEEEEEE"
-                                       Width="14"
-                                       Height="14" />
+                            <Border x:Name="disabled"
+                                    Opacity="0"
+                                    Background="#8CEEEEEE"
+                                    CornerRadius="1"
+                                    Width="14"
+                                    Height="14" />
                         </Grid>
 
                         <ContentPresenter x:Name="content" TextBlock.Foreground="{TemplateBinding Foreground}" Grid.Column="1" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalAlignment}"></ContentPresenter>

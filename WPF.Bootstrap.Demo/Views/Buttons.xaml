@@ -5,10 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="600">
-    <UserControl.Resources>
-    </UserControl.Resources>
-    
-    
     <StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10">
             <Button Style="{StaticResource DefaultButton}" Content="Default"/>
@@ -39,13 +35,20 @@
         </StackPanel>
         
         <StackPanel Margin="10" Orientation="Horizontal">            
-            <CheckBox Content="Checkbox" IsChecked="True"></CheckBox>
+            <CheckBox Content="Enabled" IsChecked="True"></CheckBox>
 
-            <CheckBox Content="Indeterminate Checkbox" Margin="10,0,0,0" IsThreeState="True"></CheckBox>
+            <CheckBox Content="Enabled" Margin="10,0,0,0" IsThreeState="True"></CheckBox>
 
-            <CheckBox Content="Disabled Checkbox" Margin="10,0,0,0" IsEnabled="False"></CheckBox>
+            <CheckBox Content="Disabled" Margin="10,0,0,0" IsEnabled="False"></CheckBox>
 
-            <CheckBox Content="Disabled Checkbox" Margin="10,0,0,0" IsEnabled="False" IsChecked="True"></CheckBox>
+            <CheckBox Content="Disabled" Margin="10,0,0,0" IsEnabled="False" IsChecked="True"></CheckBox>
+        </StackPanel>
+        
+        <StackPanel Margin="10" Orientation="Horizontal">
+            <RadioButton Content="Enabled" GroupName="radio" IsChecked="True"></RadioButton>
+            <RadioButton Content="Enabled" GroupName="radio" Margin="10,0,0,0"></RadioButton>
+            <RadioButton Content="Disabled" GroupName="disabled_radio" Margin="10,0,0,0" IsChecked="True" IsEnabled="False"></RadioButton>
+            <RadioButton Content="Disabled" GroupName="disabled_radio" Margin="10,0,0,0" IsEnabled="False"></RadioButton>
         </StackPanel>
     </StackPanel>
 </UserControl>
