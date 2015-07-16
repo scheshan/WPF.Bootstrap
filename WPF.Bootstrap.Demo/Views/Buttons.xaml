@@ -33,6 +33,5 @@
 
             <Button Style="{StaticResource DangerButton}" IsEnabled="False" Margin="10,0,0,0" Content="Danger"/>
         </StackPanel>
-
     </StackPanel>
 </UserControl>

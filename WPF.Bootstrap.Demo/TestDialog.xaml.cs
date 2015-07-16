@@ -10,27 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF.Bootstrap.Controls;
 
 namespace WPF.Bootstrap.Demo
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// Interaction logic for TestDialog.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class TestDialog : Dialog
     {
-        public MainWindow()
+        public TestDialog()
         {
             InitializeComponent();
-
-            this.Loaded += MainWindow_Loaded;
-        }
-
-        void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            new TestDialog().Show();
         }
     }
 }

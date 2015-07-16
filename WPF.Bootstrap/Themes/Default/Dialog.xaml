@@ -1,36 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style TargetType="Button" x:Key="InlineButton">
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="FontSize" Value="16"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Grid Background="Transparent">
-                        <ContentPresenter Opacity="0.6" Name="content"/>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup>
-                                <VisualState Name="Normal"></VisualState>
-                                <VisualState Name="MouseOver">
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="content" Storyboard.TargetProperty="Opacity" To="0.85" Duration="0"/>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState Name="Pressed">
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="content" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>    
-    
-    <Style TargetType="Window" x:Key="Dialog">
+                    xmlns:controls="clr-namespace:WPF.Bootstrap.Controls"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">   
+
+    <Style TargetType="controls:Dialog">
+        <Setter Property="Background" Value="White"/>
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="AllowsTransparency" Value="True"/>
         <Setter Property="shell:WindowChrome.WindowChrome">
@@ -55,11 +29,31 @@
                                     </Grid.ColumnDefinitions>
 
                                     <ContentControl TextBlock.FontSize="16" Content="{TemplateBinding Title}"/>
-                                    
+
                                     <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
-                                        <!--<Button Command="{x:Static shell:SystemCommands.CloseWindowCommand}" Style="{StaticResource InlineButton}" shell:WindowChrome.IsHitTestVisibleInChrome="True">
-                                            x
-                                        </Button>-->
+                                        <Button x:Name="PART_MinButton" Margin="0,0,10,0" Width="12" Height="12" Style="{DynamicResource InlineButton}" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                                            <Viewbox VerticalAlignment="Bottom">
+                                                <Path Data="F1M0,6L0,9 9,9 9,6 0,6z" Stretch="Uniform" Fill="#333"/>
+                                            </Viewbox>
+                                        </Button>
+
+                                        <Button x:Name="PART_RestoreButton" Margin="0,0,10,0" Width="12" Height="12" Style="{DynamicResource InlineButton}" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                                            <Viewbox>
+                                                <Path Data="F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z" Stretch="Uniform" Fill="#333"/>
+                                            </Viewbox>
+                                        </Button>
+
+                                        <Button x:Name="PART_MaxButton" Margin="0,0,10,0" Width="12" Height="12" Style="{DynamicResource InlineButton}" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                                            <Viewbox>
+                                                <Path Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z" Stretch="Uniform" Fill="#333"/>
+                                            </Viewbox>
+                                        </Button>
+
+                                        <Button x:Name="PART_CloseButton" Width="12" Height="12" Style="{DynamicResource InlineButton}" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                                            <Viewbox>
+                                                <Path Data="M72.0101,0C90.4433,2E-06,108.882,7.01784,122.949,21.0535L384.892,282.359 646.792,21.0535C674.927,-7.01784 720.547,-7.01784 748.683,21.0535 776.775,49.1265 776.775,94.5986 748.64,122.67L486.74,383.975 748.683,645.324C776.818,673.397 776.775,718.89 748.683,746.962 720.547,775.002 674.927,775.023 646.792,746.962L384.892,485.635 122.949,746.962C94.814,775.023 49.1957,775.002 21.1022,746.962 -7.03405,718.89 -7.03405,673.397 21.1022,645.324L283.001,384.018 21.1022,122.67C-7.03405,94.5986 -7.03405,49.1265 21.1022,21.0535 35.1489,7.01784 53.5769,2E-06 72.0101,0z" Stretch="Uniform" Fill="#333"/>
+                                            </Viewbox>
+                                        </Button>
                                     </StackPanel>
                                 </Grid>
                             </Border>
@@ -67,6 +61,21 @@
                             <ContentPresenter Grid.Row="1"></ContentPresenter>
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter TargetName="PART_MaxButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="WindowState" Value="Normal">
+                            <Setter TargetName="PART_MaxButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_RestoreButton" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ResizeMode" Value="NoResize">
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="PART_MinButton"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="PART_RestoreButton"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="PART_MaxButton"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

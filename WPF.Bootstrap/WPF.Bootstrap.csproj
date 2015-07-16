@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Controls\Alert.cs" />
     <Compile Include="Controls\BootstrapPanel.cs" />
+    <Compile Include="Controls\Dialog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
