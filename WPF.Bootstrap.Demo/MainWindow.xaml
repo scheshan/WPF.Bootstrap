@@ -7,7 +7,7 @@
         xmlns:view="clr-namespace:WPF.Bootstrap.Demo.Views"
         Title="Demo" Height="700" Width="800">
     
-    <TabControl Margin="5" TabStripPlacement="Left">
+    <TabControl TabStripPlacement="Left">
         <TabItem Header="Button">
             <view:Buttons/>
         </TabItem>

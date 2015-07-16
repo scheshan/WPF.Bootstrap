@@ -28,7 +28,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ListBox">
                         <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
-                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <ScrollViewer CanContentScroll="False" Padding="0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                                 <ItemsPresenter ClipToBounds="True"></ItemsPresenter>
                             </ScrollViewer>
                         </Border>

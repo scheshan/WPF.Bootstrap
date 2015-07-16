@@ -7,6 +7,7 @@
         <Setter Property="Background" Value="White"/>
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="Padding" Value="15"/>
         <Setter Property="shell:WindowChrome.WindowChrome">
             <Setter.Value>
                 <shell:WindowChrome CaptionHeight="49" CornerRadius="6"/>
@@ -58,7 +59,7 @@
                                 </Grid>
                             </Border>
 
-                            <ContentPresenter Grid.Row="1"></ContentPresenter>
+                            <ContentPresenter Margin="{TemplateBinding Padding}" Grid.Row="1"></ContentPresenter>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
