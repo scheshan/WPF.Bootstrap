@@ -11,5 +11,7 @@
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/Dialog.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/CheckBox.xaml"/>
         <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/RadioButton.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/ListBox.xaml"/>
+        <ResourceDictionary Source="/WPF.Bootstrap;component/Themes/Default/ScrollBar.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
